@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "389488979877",
+    "project_id": "sashimi-mvp",
+    "storage_bucket": "sashimi-mvp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389488979877:android:19367e48c900a1f187024c",
+        "android_client_info": {
+          "package_name": "com.example.sashimi_mvp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389488979877-ucqbq0prb2pvodveb9dibdres4q5guie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLYSqa8heVCUUA9AEsjzSBEWSHJ9RgUcM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389488979877-ucqbq0prb2pvodveb9dibdres4q5guie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

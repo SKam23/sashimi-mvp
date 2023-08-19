@@ -1,6 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sashimi_mvp/reusable_widget/reusable_widget.dart';
-import 'package:sashimi_mvp/screens/home_screen.dart';
+import 'package:sashimi_mvp/screens/signin_screen.dart';
 import 'package:sashimi_mvp/utils/color_utils.dart';
 import 'package:logger/logger.dart';
 
@@ -17,12 +18,31 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _emailTextController = TextEditingController();
   final TextEditingController _passwordTextController = TextEditingController();
 
-  void _handleSignUpButtonPressed() {
-    _logger.d("Sign Up Button Pressed");
-    Navigator.push(context, MaterialPageRoute(builder: (context) {
-      return const HomeScreen();
-    }));
+void _handleSignUpButtonPressed() async {
+  _logger.d("Sign Up Button Pressed");
+
+  try {
+    await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      email: _emailTextController.text,
+      password: _passwordTextController.text,
+    );
+    
+    _logger.d("New Account Created");
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const SignInScreen()),
+    );
+  } catch (error) {
+    _logger.e("Sign Up Error: ${error.toString()}");
+    _showErrorMessage("Sign Up Error: ${error.toString()}");
   }
+}
+
+void _showErrorMessage(String message) {
+  // Implement error message display here
+}
+
+
 
   @override
   Widget build(BuildContext context) {

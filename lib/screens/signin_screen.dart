@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sashimi_mvp/reusable_widget/reusable_widget.dart';
 import 'package:sashimi_mvp/screens/home_screen.dart';
@@ -17,12 +18,25 @@ class _SignInScreenState extends State<SignInScreen> {
   final TextEditingController _emailTextController = TextEditingController();
   final TextEditingController _passwordTextController = TextEditingController();
 
-  void _handleSignInButtonPressed() {
-    _logger.d("Sign In Button Pressed");
-    Navigator.push(context, MaterialPageRoute(builder: (context) {
-      return const HomeScreen();
-    }));
-  }
+  void _handleSignInButtonPressed() async {
+    try {
+      _logger.d("Sign In Button Pressed");
+      
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: _emailTextController.text,
+        password: _passwordTextController.text,
+      );
+      
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const HomeScreen()),
+      );
+    } catch (error, stackTrace) {
+      _logger.e("Sign in Error: ${error.toString()}");
+      // Handle the error here (e.g., show an error message to the user)
+    }
+  }   
+
 
   void _handleSignUpLinkTapped() {
     _logger.d("Sign Up link tapped");

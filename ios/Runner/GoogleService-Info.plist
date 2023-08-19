@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>389488979877-09fu7pe21a3ldscno6kbo4vb42nc3e6s.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.389488979877-09fu7pe21a3ldscno6kbo4vb42nc3e6s</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAIZT-LX9CVnE_6oxsuqC2ZJPXEh2AegmI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>389488979877</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.sashimiMvp</string>
+	<key>PROJECT_ID</key>
+	<string>sashimi-mvp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sashimi-mvp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:389488979877:ios:c3baaa0f088f03c187024c</string>
+</dict>
+</plist>
